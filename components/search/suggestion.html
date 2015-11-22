@@ -1,0 +1,320 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+
+<dom-module id="sug_container-f">
+
+    <style>
+        .sug_head h4 {
+            color: var(--grey-3);
+            z-index: 400;
+            padding: 20px;
+            width: 100%;
+            background-color: var(--blue-4);
+        }
+        
+        .sug_container {
+            background-color: var(--blue-2);
+            color: var(--grey-4);
+            /*            overflow-x: hidden;*/
+            padding-bottom: 20px;
+        }
+        
+        .main_cont {
+            border-radius: 0px;
+            overflow: hidden;
+            background-color: var(--blue-2);
+        }
+        /*
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+        }
+*/
+        
+        .main_cont {
+            margin-top: 60px;
+        }
+        
+        @media(min-width:780px) {
+            .sug_container {
+                z-index: 400;
+                height: 500px;
+                margin: 0px
+            }
+            ::-webkit-scrollbar {
+                position: absolute;
+                z-index: 100;
+                width: 5px;
+            }
+            ::-webkit-scrollbar-track {
+                border-radius: 0px;
+            }
+            ::-webkit-scrollbar-thumb {
+                border-radius: 0px;
+                background-color: var(--link-2);
+            }
+            /*
+            ::-webkit-scrollbar:hover {
+                width: 100px;
+            }
+*/
+            /*
+            
+            .fix_sug {
+                top: 0px;
+                position: fixed;
+                margin: 0px 0px 0px 0px;
+                right: 10px;
+                border-radius: 0px;
+                background-color: var(--blue-2);
+                border-radius: 10px;
+                background-color: var(--blue-2);
+            }
+*/
+            .sug_content {
+                height: 500px;
+                position: relative;
+                z-index: 400;
+                overflow: auto;
+                overflow-x: hidden;
+            }
+            /*
+            ::-webkit-scrollbar-track:window-inactive {
+                width: 100px;
+                cursor: pointer;
+            }
+*/
+            .main_cont {
+                border-radius: 10px;
+                margin-top: 0px;
+                /*                margin: 0px 40px 0px 10px;*/
+                height: 500px;
+                background-color: var(--blue-2);
+            }
+        }
+
+    </style>
+
+
+    <template>
+        <div class="main_cont  ">
+
+            <div class="sug_head  col-12">
+                <h4>SUGGESTIONS</h4>
+            </div>
+
+            <div class="sug_container col col-12">
+                <div class="sug_content col col-12">
+                    <!--
+                    <suggestions-f name="Sunny Leone " image_celeb="img/celeb1.jpg ">
+                                                <f-buttons likes="34k " dislikes="200 "></f-buttons>
+                        <f-rating rate="4.5 "> </f-rating>
+                    </suggestions-f>
+-->
+                    <content></content>
+                </div>
+            </div>
+        </div>
+
+    </template>
+
+
+
+    <script>
+        Polymer({
+            is: "sug_container-f",
+            //
+            //            ready: function () {
+            //
+            //                var wrap = $(".main_cont");
+            //
+            //                wrap.on("scroll", function (e) {
+            //
+            //                    if (this.scrollTop > 147) {
+            //                        wrap.addClass("fix_sug");
+            //                    } else {
+            //                        wrap.removeClass("fix_sug");
+            //
+            //                    }
+            //                });
+            //                console.log("sdfhb");
+            //
+            //            }
+
+        })
+
+    </script>
+</dom-module>
+
+<dom-module id="suggestions-f">
+
+    <style>
+        .suggestions {
+            padding: 10px 30px;
+            padding-bottom: 5px;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+            background-image: linear-gradient(to right, var(--grey-2), 25%, rgba(183, 25, 25, 0) 0%);
+            background-size: 6px 1px;
+            background-repeat: repeat-x;
+            background-position: bottom;
+            float: left;
+            color: var(--blue-3);
+        }
+        
+        .suggestions:hover {
+            background-color: var(--blue-3);
+            cursor: pointer;
+            background-image: linear-gradient(to right, var(--blue-3) 25%, rgba(183, 25, 25, 0) 0%);
+        }
+        
+        .img_celeb img {
+            max-width: 100%;
+            max-height: 80px;
+            margin-top: 10px;
+        }
+        
+        .img_celeb {
+            max-width: 80px;
+            padding-bottom: 10px;
+        }
+        
+        .clip_circle {
+            -webkit-clip-path: circle(50% at center);
+        }
+        
+        .img_text {
+            padding: 20px 30px;
+        }
+        
+        h2 {
+            color: var(--grey-4);
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+        }
+        
+        .lightname h2 {
+            color: var(--link-3);
+        }
+        
+        .text p {
+            color: var(--grey-2);
+        }
+        
+        p {
+            margin-top: 5px;
+        }
+        
+        @media(min-width:780px) {
+            .suggestions {
+                padding: 0px 30px 30px 30px;
+                padding-bottom: 30px;
+            }
+            .suggestions:hover {
+                border-radius: 0px;
+            }
+            .img_celeb img {
+                max-width: 100%;
+                max-height: 70px;
+                margin-top: 20px;
+            }
+            .img_celeb {
+                max-width: 70px;
+            }
+            .img_text {
+                padding: 30px 30px;
+            }
+            h2 {
+                font-size: 0.875em;
+            }
+        }
+
+    </style>
+
+    <template>
+
+        <div class="suggestions col col-12">
+            <div class="img_celeb col sm-col-4"><img src="{{image_celeb}}" class="clip_circle">
+            </div>
+
+            <div class="img_text col sm-col-8  ">
+
+                <h2>{{name}}</h2>
+
+                <p>{{description}}</p>
+
+                <content></content>
+            </div>
+
+        </div>
+
+    </template>
+
+    <script>
+        Polymer({
+            is: "suggestions-f",
+            properties: {
+                name: String,
+                description: String,
+            },
+            ready: function() {
+
+                $(".suggestions").mouseover(function() {
+
+                    $(this).find(".img_text").addClass("lightname");
+
+                });
+                $(".suggestions").mouseleave(function() {
+                    $(this).find(".img_text").removeClass("lightname");
+                });
+            }
+        });
+
+    </script>
+</dom-module>
+
+<!--
+<dom-module id="sug_header-f">
+    <style>
+        .sug_head h4 {
+            color: var(--grey-3);
+            padding: 20px;
+            width: 100%;
+            background-color: var(--blue-4);
+        }
+    </style>
+
+    <template>
+        <div class="sug_head col col-12">
+            <h4>SUGGESTIONS</h4>
+        </div>
+    </template>
+
+    <script>
+        Polymer({
+            is: "sug_header-f",
+            properties: {
+
+            },
+
+
+            //            ready: function () {
+            //                console.log("boom");
+            //
+            //                $(window).scroll(function () {
+            //                    $('.sug_head h4').css({
+            //                        'top': $(this).scrollTop()
+            //                    });
+            //                })
+            //            }
+        });
+    </script>
+</dom-module>-->

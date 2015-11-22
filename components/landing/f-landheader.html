@@ -1,0 +1,66 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="f-landheader">
+    <style>
+        img {
+            width: 25px;
+            vertical-align: middle;
+        }
+        
+        #logo-text {
+            font-size: 1.5em;
+            margin-left: 5px;
+            font-family: 'Brandon Black';
+            vertical-align: middle;
+        }
+        
+        a {
+            color: var(--grey-4);
+            margin-top: 0px;
+            line-height: 0em;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .features {
+            text-align: right;
+        }
+        
+        .features a {
+            margin-top: 1em;
+        }
+        
+        a:hover {
+            cursor: pointer;
+            color: var(--grey-5);
+        }
+
+    </style>
+
+    <template>
+
+        <div class="row">
+            <div class="logo-wrap col sm-col-6">
+                <a href="index.html"> <img src="../../img/logo-40.png"><span id="logo-text">FOUNCH</span></a>
+            </div>
+            <div class="features col sm-col-6 ">
+                <a href="features.html">OUR FEATURES</a>
+
+            </div>
+
+        </div>
+
+    </template>
+
+    <script>
+        Polymer({
+            is: "f-landheader",
+            properties: {
+                logo: {
+                    type: String,
+                    value: "Founch"
+                }
+            }
+        });
+
+    </script>
+</dom-module>

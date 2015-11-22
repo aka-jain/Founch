@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+
+        About Us
+    </title>
+    <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+
+    <script src="../js/jquery.js"></script>
+
+
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="import" href="theme.html">
+    <link rel="import" href="../components/f-header.html">
+    <link rel="import" href="../components/f-contactmodu.html">
+    <link rel="import" href="../components/f-footer.html">
+</head>
+
+<style>
+    body {
+        background-color: #f0f5f9;
+    }
+    
+    .contact-wrap {
+        padding: 40px;
+    }
+    
+    .footer-wrap {
+        position: static;
+    }
+    
+    @media(min-width:80px) {
+        .footer-wrap {
+            position: absolute;
+        }
+    }
+
+</style>
+
+<body>
+    <f-header></f-header>
+
+    <div class="row">
+        <div class="col col-12 contact-wrap">
+            <f-contactmodu></f-contactmodu>
+        </div>
+    </div>
+    <div class="footer-wrap col col-12">
+        <f-footer></f-footer>
+    </div>
+
+    <script src="../js/land-js.js"></script>
+</body>
+
+</html>

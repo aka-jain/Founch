@@ -1,0 +1,123 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="f-contactmodu">
+    <style>
+        .contact-head {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            border-bottom: 1px solid #91a8bb;
+            padding-bottom: 20px;
+        }
+        
+        input {
+            font-family: 'Brandon Regular';
+            border: 0px;
+            width: 500px;
+            height: 45px;
+            color: var(--grey-3);
+            font-size: 1.025em;
+            padding-left: 15px;
+            transition: all 0.2s ease;
+            background-color: var(--grey-4);
+            border-radius: 3px;
+        }
+        
+        input:focus,
+        textarea:focus {
+            background-color: var(--grey-2);
+            color: var(--grey-5);
+        }
+        
+        .content {
+            text-align: center;
+        }
+        
+        .inp {
+            margin-top: 40px;
+        }
+        
+        ::-webkit-input-placeholder {
+            color: var(--grey-3);
+            padding-left: 0px;
+            font-family: 'Brandon Bold';
+        }
+        
+        textarea {
+            resize: none;
+            color: var(--grey-3);
+            font-size: 1.025em;
+            transition: all 0.2s ease;
+            padding: 10px 15px 0px 15px;
+            width: 500px;
+            height: 200px;
+            border: 0px;
+            background-color: var(--grey-4);
+            border-radius: 3px;
+            font-family: 'Brandon Regular';
+        }
+        
+        .btn {
+            cursor: pointer;
+            margin: 20px 10px;
+            display: inline-block;
+            background-color: var(--blue-4);
+            padding: 15px 25px;
+            border-radius: 3px;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .btn:hover {
+            background-color: var(--blue-2);
+        }
+        
+        .btn h4 {
+            color: var(--grey-5);
+        }
+
+    </style>
+    <template>
+        <div class="row">
+            <div class="contact-head ">
+                <h2>  Leave your message</h2></div>
+            <div class="row">
+                <div class="content col col-12">
+                    <form id="contact">
+                        <div class="inp">
+                            <input type="text" name="name" placeholder="NAME " />
+                        </div>
+                        <div class="inp">
+                            <input type="email" name="email" placeholder="EMAIL ID" />
+                        </div>
+                        <div class="inp">
+                            <textarea name="msg" placeholder="LEAVE YOUR MESSAGE HERE"></textarea>
+                        </div>
+                        <div class="btn">
+                            <h4>SEND</h4>
+                        </div>
+                        <div class="btn reset">
+                            <h4>RESET</h4>
+                        </div>
+
+
+
+
+
+
+                    </form>
+
+
+                </div>
+            </div>
+
+        </div>
+    </template>
+
+    <script>
+        Polymer({
+            is: "f-contactmodu",
+            properties: {}
+        });
+
+    </script>
+</dom-module>

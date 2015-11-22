@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+
+        About Us
+    </title>
+    <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+
+    <script src="../js/jquery.js"></script>
+
+
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="import" href="theme.html">
+    <link rel="import" href="../components/f-header.html">
+    <link rel="import" href="f-aboutmodu.html">
+    <link rel="import" href="f-footer.html">
+</head>
+
+<style>
+    body {
+        background-color: #f0f5f9;
+    }
+    
+    .wrapper {
+        margin-bottom: 0px;
+        padding: 40px 0px;
+        background-color: #f0f5f9;
+    }
+    
+    .foot {}
+    
+    @media(min-width:780px) {
+        .wrapper {
+            margin-bottom: 100px;
+            padding: 40px;
+            background-color: #f0f5f9;
+        }
+        .foot {
+            position: fixed;
+            bottom: 0px;
+        }
+    }
+
+</style>
+
+<body>
+    <f-header></f-header>
+    <div class="row">
+        <div class=" wrapper col-12">
+
+            <f-aboutmodu></f-aboutmodu>
+
+        </div>
+    </div>
+    <div class="foot col-12">
+        <f-footer></f-footer>
+    </div>
+
+</body>
+
+</html>

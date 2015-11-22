@@ -1,0 +1,333 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Founch</title>
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+
+    <script src="js/jquery.js"></script>
+
+    <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script>
+
+
+
+
+
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="import" href="components/theme.html">
+    <link rel="import" href="components/landing/f-landimg.html">
+    <link rel="import" href="components/landing/f-landheader.html">
+    <link rel="import" href="components/landing/f-landsearch.html">
+    <link rel="import" href="components/landing/f-landtrend.html">
+    <link rel="import" href="components/landing/f-landnews.html">
+    <link rel="import" href="components/f-footer.html">
+
+</head>
+
+<style>
+    .img-container {
+        padding: 20px;
+    }
+    
+    .set-content {
+        text-align: center;
+        margin-top: 40px;
+        padding: 0px 40px;
+        margin-left: 0px;
+        font-family: 'Brandon Black';
+        /*        border: 1px solid red;*/
+    }
+    
+    .set-content h2 {
+        line-height: 1.3em;
+        color: #f0f5f9;
+    }
+    
+    .set-search {
+        margin-top: 20px;
+    }
+    
+    .set-video {
+        margin-top: 20px;
+    }
+    
+    .set-trend {
+        margin-top: 5px;
+        position: relative;
+    }
+    
+    .wrap-trend {
+        margin-top: 70px;
+    }
+    
+    .l-arrow {
+        position: absolute;
+        opacity: 0.85;
+        left: 0px;
+        top: 0px;
+        transition: all 0.2s ease;
+        /*        border: 1px solid white;*/
+    }
+    
+    .l-arrowl {
+        opacity: 0.31;
+    }
+    
+    .l-arrow img {
+        cursor: pointer;
+        margin-top: 150px;
+        width: 30px;
+        /*        border: 1px solid red;*/
+    }
+    
+    .r-arrow {
+        position: absolute;
+        opacity: 0.85;
+        right: 0;
+        top: 0px;
+        opacity: 0.85;
+        transition: all 0.2s ease;
+    }
+    
+    .r-arrowl {
+        opacity: 0.31;
+        /*        border: 1px solid red;*/
+    }
+    
+    .r-arrow img {
+        cursor: pointer;
+        width: 30px;
+        margin-top: 150px;
+        /*        border: 1px solid red;*/
+    }
+    
+    li {
+        display: inline-block;
+        padding-left: 0px;
+        padding-right: 27px;
+        text-align: center;
+    }
+    
+    .outer-gal {
+        /*        position: absolute;*/
+        /*
+        margin-left: auto;
+        margin-right: auto;
+        left: 0px;
+        right: 0px;
+*/
+        margin: 0 auto;
+        overflow-y: hidden;
+        height: 300px;
+    }
+    
+    .outer-gal::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .inner-gal {
+        /*        position: relative;*/
+        padding: 0px 0px;
+        text-align: left;
+        /*        border: 1px solid red;*/
+    }
+    
+    .set-news {
+        dislplay: block;
+        /*        padding: 0px 00px;*/
+        /*        border: 1px solid red;*/
+        top: 310px;
+        background-color: #f0f5f9;
+        padding-bottom: 40px;
+        padding: 0px 20px 20px 20px;
+    }
+    
+    .news-head {
+        text-align: center;
+        background-color: #f0f5f9;
+        padding: 40px 0px 20px 0px;
+        display: block;
+    }
+    
+    .set-news h4 {
+        color: #91a8bb;
+    }
+    
+    .outer-news {
+        /*        border: 1px solid red;*/
+        margin: 0 auto;
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+    
+    .card {
+        min-height: 170px;
+        margin-top: 20px;
+    }
+    
+    .load {
+        text-align: center;
+    }
+    
+    .load h4 {
+        cursor: pointer;
+        display: inline;
+    }
+    
+    .footers {
+        display: block;
+        background-color: aquamarine;
+        /*        position: absolute;*/
+        z-index: 2000;
+    }
+    
+    .wrap-news {
+        padding-bottom: 20px;
+    }
+    
+    @media(min-width: 780px) {
+        .img-container {
+            padding: 40px;
+        }
+        .set-content {
+            margin-top: 80px;
+        }
+        .r-arrow img {
+            width: 40px;
+        }
+        .l-arrow img {
+            width: 40px;
+        }
+        .news-head {
+            /*            padding: 40px 0px 20px 40px;*/
+        }
+    }
+
+</style>
+
+<body>
+
+
+    <div class="set-img row col-12">
+
+        <f-landimg>
+
+            <div class="img-container row col-12">
+
+
+                <div class="set-header row col-12">
+                    <f-landheader></f-landheader>
+                </div>
+
+
+                <div class="set-content row col-12" style="margin-left:0px">
+                    <h2>BRINGING TOGETHER ALL INFORMATION, AT ONE PLACE!</h2></div>
+                <div class="set-search row col-12" style="margin-left:0px">
+                    <f-landsearch></f-landsearch>
+                </div>
+
+                <div class="set-video row col-12" style="margin-left:0px">
+
+                    <f-vid1></f-vid1>
+
+
+                </div>
+                <div class="clr"></div>
+
+                <div class="set-trend row sm-col-12">
+                    <div class="l-arrow"><img src="img/prev.png"></div>
+
+
+                    <div class="outer-gal sm-col-10">
+
+                        <div class="inner-gal" id="inner">
+
+                            <ul></ul>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="r-arrow"><img src="img/next.png"> </div>
+                </div>
+            </div>
+
+            <div class="set-news col-12" style="margin-left:0px">
+                <div class="news-head">
+                    <h4>news feed</h4>
+                </div>
+
+                <div class="row wrap-news">
+
+                    <div class=" outer-news col-10">
+
+
+                        <div class="card col col-7">
+                            <f-landnews head="What the hell is it abpout" newsource="NEW York times" description="Respect among rivals -- for tonight, at least! Boston native Ben Affleck is a diehard Red Sox fan, but on Wednesday, July 15, at the 2015 ESPYS, he put his Fenway loyalties aside to honor a former foe: recently retired Yankees shortstop Derek Jeter.
+" img="img/news1.jpg"></f-landnews>
+                        </div>
+
+
+                        <div class="card col col-5">
+                            <f-landnews head="What the hell is it abpout" newsource="NEW York times" description="Respect among rivals -- for tonight, at least! Boston native Ben Affleck is a diehard Red Sox fan, but on Wednesday, July 15, at the 2015 ESPYS, he put his Fenway loyalties aside to honor a former foe: recently retired Yankees shortstop Derek Jeter.
+" img="img/news2.jpg"></f-landnews>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="card col col-5" style="margin-left:0px">
+                                <f-landnews head="What the hell is it abpout" newsource="NEW York times" description="Respect among rivals -- for tonight, at least! Boston native Ben Affleck is a diehard Red Sox fan, but on Wednesday, July 15, at the 2015 ESPYS, he put his Fenway loyalties aside to honor a former foe: recently retired Yankees shortstop Derek Jeter.
+" img="img/news3.jpg"></f-landnews>
+                            </div>
+                            <div class="card col col-7">
+                                <f-landnews head="What the hell is it abpout" newsource="NEW York times" description="Respect among rivals -- for tonight, at least! Boston native Ben Affleck is a diehard Red Sox fan, but on Wednesday, July 15, at the 2015 ESPYS, he put his Fenway loyalties aside to honor a former foe: recently retired Yankees shortstop Derek Jeter.
+" img="img/news4.jpg"></f-landnews>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="card col col-7">
+                                <f-landnews head="What the hell is it abpout" newsource="NEW York times" description="Respect among rivals -- for tonight, at least! Boston native Ben Affleck is a diehard Red Sox fan, but on Wednesday, July 15, at the 2015 ESPYS, he put his Fenway loyalties aside to honor a former foe: recently retired Yankees shortstop Derek Jeter.
+" img="img/news4.jpg"></f-landnews>
+
+                            </div>
+                            <div class="card col col-5">
+                                <f-landnews head="What the hell is it abpout" newsource="NEW York times" description="Respect among rivals -- for tonight, at least! Boston native Ben Affleck is a diehard Red Sox fan, but on Wednesday, July 15, at the 2015 ESPYS, he put his Fenway loyalties aside to honor a former foe: recently retired Yankees shortstop Derek Jeter.
+" img="img/news4.jpg"></f-landnews>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="load col col-12">
+                        <h4>load more</h4></div>
+
+                </div>
+
+
+            </div>
+            <div class="clr"></div>
+
+        </f-landimg>
+
+
+    </div>
+    <div class="clr"></div>
+
+    <div class="footers col-12">
+        <f-footer></f-footer>
+    </div>
+
+    <!-- scripts-->
+    <script src="js/land-js.js"></script>
+    <script src="js/f-js1.js"></script>
+
+</body>
+
+</html>

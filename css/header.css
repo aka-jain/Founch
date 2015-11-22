@@ -1,0 +1,80 @@
+/*font-installation*/
+
+@font-face {
+    font-family: 'bgb';
+    src: url(../sourcefiles/fonts/brandongrotesque-bold.ttf);
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(brandongrotesque-bold.ttf);
+}
+/*header*/
+
+#head {
+    background-color: #164166;
+    position: fixed;
+    width: 100%;
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+/*search box styling*/
+
+input {
+    position: relative;
+    font-family: 'bgb';
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: #265d8c;
+    outline: none;
+    border: 0;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    padding-left: 12px;
+    letter-spacing: 1.5px;
+}
+/*placeholder-chrome*/
+
+::-webkit-input-placeholder {
+    color: #dce6ee;
+}
+/*placeholder-mozilla*/
+
+::-moz-input-placeholder {
+    color: #dce6ee;
+}
+/*logo-adjustment*/
+
+#logo {
+    display: inline;
+    position: absolute;
+    color: #dce6ee;
+    font-size: 18px;
+    margin-left: 70px;
+    font-family: 'bgb';
+    margin-top: 11px;
+    letter-spacing: 1.5px;
+}
+
+#logoimg {
+    width: 25px;
+    display: inline;
+    position: relative;
+    margin-left: -30px;
+}
+
+#search-icon {
+    position: relative;
+    float: right;
+    display: inline;
+    z-index: 10;
+}
+
+#search {
+    width: 45%;
+    margin-right: auto;
+    margin-left: auto;
+}

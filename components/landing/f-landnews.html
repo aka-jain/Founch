@@ -1,0 +1,109 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="f-landnews">
+
+
+    <style>
+        .set {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            width: 100%;
+            height: 270px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: left;
+            height: 60px;
+            display: block;
+            padding: 15px 20px;
+            background-color: rgba(0, 51, 86, 0.7);
+            transition: all 0.35s ease;
+        }
+        
+        .overlay h4 {
+            color: var(--grey-5);
+            line-height: 1.2em;
+        }
+        
+        .description p {
+            color: var(--grey-4);
+            font-size: 0.83em;
+        }
+        
+        .news-source h4 {
+            font-size: 0.725em;
+            color: var(--grey-4);
+            line-height: 1.2em;
+        }
+        
+        .description {
+            display: none;
+            padding-top: 20px;
+            transition: all 0.2s linear;
+        }
+        
+        .set:hover .overlay {
+            height: 270px;
+            padding-top: 20px;
+        }
+        
+        .set:hover .description {
+            display: block;
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        .read {
+            text-align: right;
+            float: right;
+        }
+        
+        .news-source {
+            margin-top: 3px;
+        }
+        
+        .set:hover .read {
+            position: absolute;
+            float: left;
+            left: 20px;
+            margin-top: 180px;
+        }
+
+    </style>
+
+    <template>
+        <div class="set col-12">
+            <div class="overlay">
+                <h4>{{head}}</h4>
+
+
+                <div class="news-source">
+                    <h4>{{newsource}}<span class="read">read more</span></h4></div>
+                <div class="description">
+                    <p>{{description}}</p>
+                </div>
+            </div>
+            <img src={{img}}></div>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'f-landnews',
+            properties: {
+                img: String,
+                description: String,
+                head: String,
+                newsource: String,
+            }
+        })
+
+    </script>
+</dom-module>

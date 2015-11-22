@@ -1,0 +1,110 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="f-aboutmodu">
+    <style>
+        .head {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            display: block;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            border-bottom: 1px solid #91a8bb;
+            background-size: 25%;
+        }
+        
+        .content {
+            text-align: center;
+            margin: 0 auto;
+            /*            border: 1px solid red;*/
+        }
+        
+        .imgc {
+            position: absolute;
+        }
+        
+        h1 {
+            opacity: 1;
+            color: #3a5568;
+        }
+        
+        .last {
+            text-align: center;
+            margin-top: -20px;
+        }
+        
+        .last p {
+            font-size: 1.025em;
+            padding: 10px 40px;
+            color: #263b4a;
+        }
+        
+        .content p {
+            font-size: 1.025em;
+            padding: 10px 40px;
+            color: #3a5568;
+        }
+        
+        span img {
+            width: 30px;
+            display: inline-block;
+            margin-bottom: -3px;
+            margin-left: -5px;
+            margin-right: -4px;
+            position: relative;
+            /*            border: 1px solid red;*/
+        }
+        
+        .imgb {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            display: block;
+            background-image: url('../img/cloud.png');
+            background-size: 25%;
+        }
+
+    </style>
+
+    <template>
+
+
+        <div class="head">
+            <div class="imgb">
+                <h1>About Us</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class=" col col-12">
+
+                <div class="content col-8">
+                    <p>Imagine a platform where you can get the best information about everything, gathered from all over the web. So that you don’t need to search multiple times about anything as everything will be presented under a single shed.
+                        <br>
+                        <br> We at Founch believe in reducing the user efforts and time by giving relevant information for any search query. Founch is a free Advance Encyclopedia which brings together the most relevant information from multiple trusted sources so that you can get authentic information in a much better way.
+                        <br>
+                        <br> Let it be Will Smith's Biography or Will Smith's affairs or Will Smith's best movies, Founch will provide you complete, updated and authentic information at a single place.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="last col col-12">
+                    <p>
+                        Made with <span id="gif1"><img src="../img/heart.gif" width="30px"; ></span> while drinking<span id="gif2"><img src="../img/coc.gif" width="30px"; ></span>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </template>
+
+    <script>
+        Polymer({
+            is: "f-aboutmodu",
+            properties: {}
+        });
+
+    </script>
+</dom-module>

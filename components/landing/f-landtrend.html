@@ -1,0 +1,100 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../f-rating.html">
+
+<dom-module id="f-landtrend">
+
+    <style>
+        .cards {
+            position: relative;
+            width: 120px;
+            height: 170px;
+            /*            border: 1px solid red;*/
+            border-radius: 5px;
+            overflow: hidden;
+            padding-right: 40px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        img {
+            width: 120px;
+            /*            margin-left: -10px;*/
+        }
+        
+        .img-content {
+            transition: all 0.3s ease-in-out;
+            position: absolute;
+            background-color: rgba(0, 51, 86, 0.7);
+            padding: 5px;
+            /*            padding-bottom: 20px;*/
+            width: 100%;
+            /*            border: 1px solid red;*/
+            bottom: 0px;
+        }
+        
+        .cards:hover .img-content {
+            bottom: 0px;
+            padding: 80px 5px 55px 5px;
+            /*            padding: 5px;*/
+            /*            border: 1px solid red;*/
+        }
+        
+        .img-content h4 {
+            line-height: 1.8em;
+            color: var(--grey-5);
+            font-size: 0.625em;
+            font-family: 'brandon bold'
+        }
+        
+        .rate {
+            font-size: 1.525em;
+        }
+        
+        .rating {
+            color: var(--grey-4);
+        }
+        
+        @media(min-width:780px) {
+            .cards {
+                width: 160px;
+                height: 200px;
+            }
+            img {
+                width: 160px;
+            }
+            .img-content h4 {
+                font-size: 0.725em;
+            }
+            .cards:hover .img-content {
+                padding: 90px 5px 70px 5px;
+                /*            padding: 5px;*/
+                /*            border: 1px solid red;*/
+            }
+        }
+
+    </style>
+
+    <template>
+        <div class=" cards ">
+            <div class="img-content">
+                <h4>{{name}}</h4>
+                <h4> <span class="rating">Rating&nbsp;</span>
+                    <span class="rate">{{rate}}</span></h4>
+            </div>
+            <div><img src="{{img}}" </div>
+            </div>
+    </template>
+
+    <script>
+        Polymer({
+            is: "f-landtrend",
+            properties: {
+                rate: String,
+                img: String,
+            },
+        });
+
+    </script>
+
+</dom-module>

@@ -1,0 +1,70 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="f-rating">
+
+    <style>
+        .rate_cont {
+            margin-top: 10px;
+        }
+        
+        .rating_text small {
+            margin-left: 5px;
+        }
+        
+        img {
+            width: 12px;
+            margin-top: 0px;
+            line-height: 0.625em;
+        }
+        
+        .rate h2 {
+            margin-left: 5px;
+            margin-top: 0px;
+            font-size: 1.125em;
+        }
+        
+        h3 {
+            color: var(--grey-3);
+        }
+        
+        small {
+            color: var(--grey-3);
+        }
+
+    </style>
+
+    <template>
+
+
+        <div class="rate_cont row">
+            <img src="../img/logo-40.png" class="col sm-col-2">
+            <div class="rating_text">
+                <small class="col">rating</small>
+            </div>
+            <div class="rate col ">
+                <h3>{{rate}}</h3>
+            </div>
+        </div>
+
+    </template>
+
+    <script>
+        Polymer({
+            is: "f-rating",
+            properties: {
+                //                dark: {
+                //                    type: Boolean,
+                //                    observer: '_dark'
+                //                },
+
+                rate: String,
+            },
+            //            _dark: function () {
+            //                if (this.dark) {
+            //                    $(".rate ").addClass("dark h2");
+            //                }
+            //            }
+        })
+
+    </script>
+</dom-module>

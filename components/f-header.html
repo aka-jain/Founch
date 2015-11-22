@@ -1,0 +1,190 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="f-header">
+    <style>
+        :host {
+            display: block;
+            width: 100%;
+            background-color: var(--blue-2);
+            font-family: "Brandon Black", sans-serif;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+        
+        a {
+            display: inline-block;
+        }
+        
+        .logo {
+            display: inline-block;
+        }
+        
+        .logo img {
+            width: 1.250em;
+        }
+        
+        .logo-text {
+            display: inline-block;
+            font-size: 1.2em;
+            color: var(--grey-5);
+        }
+        
+        svg {
+            width: 1.2em;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        
+        svg path {
+            fill: var(--grey-5);
+        }
+        
+        @media(min-width: 780px) {
+            :host {
+                padding: 20px 40px;
+            }
+            svg {
+                top: 30px;
+                right: 40px;
+            }
+        }
+
+    </style>
+
+    <template>
+        <div class="logo  col-3">
+            <img src="../img/logo-40.png">
+            <div class="logo-text">{{logo}}</div>
+        </div>
+        <search-bar></search-bar>
+
+        <a href="../index.html">
+            <svg version="1.1" id="home-btn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 611.997 611.998" style="enable-background:new 0 0 611.997 611.998;" xml:space="preserve">
+                <path d="M511.114,300.251c-9.94,0-17.638,7.663-17.638,17.651v241.105H368.401v-98.453c0-9.236-7.697-17.31-17.002-17.31h-90.435
+			c-9.948,0-17.96,8.073-17.96,17.31v98.453h-124.76v-233.1c0-9.306-7.69-17.036-17.638-17.036c-9.298,0-16.995,7.73-16.995,17.036
+			v250.752c0,9.305,7.697,17.036,16.995,17.036h160.358c9.298,0,16.995-7.731,16.995-17.036v-98.454h55.801v98.454
+			c0,9.305,7.697,17.036,17.639,17.036h159.715c9.299,0,16.995-7.731,16.995-17.036V317.903
+			C528.109,307.915,520.413,300.251,511.114,300.251z" />
+                <path d="M607.003,314.003L467.819,174.225V78.919c0-9.921-8.019-17.583-17.96-17.583c-9.305,0-17.001,7.663-17.001,17.583v60.345
+			L318.046,23.774c-3.518-3.558-7.697-5.474-11.864-5.474c-4.81,0-8.983,1.984-12.507,5.474L5.361,312.087
+			c-6.917,6.91-7.375,17.994,0,24.357c6.411,7.389,17.454,6.91,24.371,0l276.45-275.793l275.807,278.393
+			c2.873,2.874,7.054,4.516,12.507,4.516c4.81,0,8.976-1.642,12.507-4.516C613.42,332.613,613.899,320.982,607.003,314.003z" />
+            </svg>
+        </a>
+
+    </template>
+
+    <script>
+        Polymer({
+            is: "f-header",
+            properties: {
+                logo: {
+                    type: String,
+                    value: "Founch"
+                }
+            }
+        });
+
+    </script>
+</dom-module>
+
+<dom-module id="search-bar">
+    <style>
+        :host {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .search-bar-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        
+        @media(min-width: 780px) {
+            .search-bar-container {
+                margin-top: 0px;
+            }
+        }
+        
+        input[type=text] {
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            background-color: var(--blue-4);
+            width: 100%;
+            font-family: 'Brandon Bold';
+            text-transform: uppercase;
+            color: var(--grey-5);
+            vertical-align: center;
+            transition: all 0.5s;
+            box-sizing: border-box;
+        }
+        
+        .focused {
+            background-color: var(--grey-5) !important;
+            color: var(--grey-1) !important;
+        }
+        
+        .focused ~ #search-btn {
+            fill: var(--grey-2);
+        }
+        
+        svg {
+            width: 1em;
+            cursor: pointer;
+        }
+        
+        #search-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            fill: var(--grey-4);
+        }
+
+    </style>
+
+    <template>
+        <div class="col-6 search-bar-container">
+            <input type="text" placeholder="{{placeholder}}" id="search-input">
+            <svg onclick=get() version="1.1" id="search-btn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612.01 612.01" style="enable-background:new 0 0 612.01 612.01;" xml:space="preserve">
+                <path d="M606.209,578.714L448.198,423.228C489.576,378.272,515,318.817,515,253.393C514.98,113.439,399.704,0,257.493,0
+				C115.282,0,0.006,113.439,0.006,253.393s115.276,253.393,257.487,253.393c61.445,0,117.801-21.253,162.068-56.586
+				l158.624,156.099c7.729,7.614,20.277,7.614,28.006,0C613.938,598.686,613.938,586.328,606.209,578.714z M257.493,467.8
+				c-120.326,0-217.869-95.993-217.869-214.407S137.167,38.986,257.493,38.986c120.327,0,217.869,95.993,217.869,214.407
+				S377.82,467.8,257.493,467.8z" />
+            </svg>
+        </div>
+    </template>
+
+    <script>
+        Polymer({
+            is: "search-bar",
+            properties: {
+                placeholder: {
+                    type: String,
+                    value: "Search for a celebrity"
+                },
+                isFocused: {
+                    type: Boolean,
+                    value: false,
+                    notify: true,
+                }
+            },
+
+            listeners: {
+                focusin: '_toggleFocus',
+                focusout: '_toggleFocus'
+            },
+
+            _toggleFocus: function() {
+                $('#search-input').toggleClass('focused');
+                this.isFocused = !this.isFocused;
+            }
+        });
+
+    </script>
+</dom-module>
